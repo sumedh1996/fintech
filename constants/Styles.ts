@@ -51,6 +51,12 @@ export const defaultStyles = StyleSheet.create({
     margin: 20,
     marginBottom: 10,
   },
+  sectionSubHeader: {
+    fontSize: 16,
+    fontWeight: 'medium',
+    margin: 20,
+    marginBottom: 10,
+  },
   block: {
     marginHorizontal: 20,
     padding: 14,
