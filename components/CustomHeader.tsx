@@ -1,13 +1,16 @@
 import Colors from '@/constants/Colors';
 import { Ionicons } from '@expo/vector-icons';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { BlurView } from 'expo-blur';
 import { Link } from 'expo-router';
+import { useUser } from '@clerk/clerk-expo';
 
 const CustomHeader = () => {
   const { top } = useSafeAreaInsets();
+  const {user} = useUser();
+  console.log(user?.imageUrl)
 
   return (
     <BlurView intensity={80} tint={'extraLight'} style={{ paddingTop: top }}>
@@ -31,7 +34,10 @@ const CustomHeader = () => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <Text style={{ color: '#fff', fontWeight: '500', fontSize: 16 }}>SG</Text>
+            {/* <Text style={{ color: '#fff', fontWeight: '500', fontSize: 16 }}>SG</Text> */}
+            <Image
+              source={{ uri: user?.imageUrl }}
+              style={{ width: 40, height: 40, borderRadius: 20 }} />
           </TouchableOpacity>
         </Link>
         <View style={styles.searchSection}>
