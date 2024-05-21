@@ -13,4 +13,7 @@ Additional features:
 - [Zeego](https://zeego.dev/start) for native menus
 - [CoinMarketCap API](https://coinmarketcap.com/api/documentation/v1/) for crypto prices
 
-#SCREENSHOTS
+#VIDEO
+
+https://github.com/sumedh1996/fintech/assets/46312679/8891b6d6-ae71-414d-8c93-03d34e27fa27
+
